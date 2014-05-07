@@ -35,11 +35,11 @@ public class Android2DDraw
 		final Shape shape = _settings.getObject( "DRAWLINES", null ) ;
 		if( shape != null )
 		{
-			final int size = shape.indicies.size() ;
+			final int size = shape.indicies.length ;
 			for( int i = 0; i < size; i += 2 )
 			{
-				final Vector2 start = shape.points.get( shape.indicies.get( i ) ) ;
-				final Vector2 end = shape.points.get( shape.indicies.get( i + 1 ) ) ;
+				final Vector2 start = shape.points[shape.indicies[i]] ;
+				final Vector2 end = shape.points[shape.indicies[i + 1]] ;
 
 				_canvas.drawLine( start.x + _position.x,
 									start.y + _position.y,
@@ -57,13 +57,13 @@ public class Android2DDraw
 		final Shape shape = _settings.getObject( "DRAWPOLYGON", null ) ;
 		if( shape != null )
 		{
-			final int size = shape.indicies.size() ;
-			final Vector2 start = shape.points.get( shape.indicies.get( 0 ) ) ;
+			final int size = shape.indicies.length ;
+			final Vector2 start = shape.points[shape.indicies[0]] ;
 			polygon.moveTo( start.x + _position.x, start.y + _position.y ) ;
 
 			for( int i = 1; i < size; i++ )
 			{
-				final Vector2 point = shape.points.get( shape.indicies.get( i ) ) ;
+				final Vector2 point = shape.points[shape.indicies[i]] ;
 				polygon.lineTo( point.x + _position.x, point.y + _position.y ) ;
 			}
 
@@ -85,7 +85,7 @@ public class Android2DDraw
 		{
 			for( final Integer index : shape.indicies )
 			{
-				final Vector2 point = shape.points.get( index ) ;
+				final Vector2 point = shape.points[index] ;
 				_canvas.drawLine( point.x + _position.x,
 									point.y + _position.y,
 									point.x + _position.x,

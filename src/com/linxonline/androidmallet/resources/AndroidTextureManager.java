@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory ;
 
 import com.linxonline.mallet.io.filesystem.GlobalFileSystem ;
 import com.linxonline.mallet.resources.* ;
+import com.linxonline.mallet.resources.texture.* ;
 
 import com.linxonline.androidmallet.resources.* ;
 

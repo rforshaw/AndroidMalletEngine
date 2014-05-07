@@ -2,7 +2,7 @@ package com.linxonline.androidmallet.resources ;
 
 import android.graphics.Bitmap ;
 
-import com.linxonline.mallet.resources.* ;
+import com.linxonline.mallet.resources.texture.* ;
 
 
 public class AndroidImage implements ImageInterface
@@ -27,4 +27,6 @@ public class AndroidImage implements ImageInterface
 	{
 		return height ;
 	}
+	
+	public void destroy() {}
 }

@@ -12,7 +12,7 @@ import com.linxonline.mallet.renderer.Basic2DRender ;
 import com.linxonline.mallet.maths.* ;
 import com.linxonline.mallet.util.settings.* ;
 import com.linxonline.mallet.renderer.* ;
-import com.linxonline.mallet.resources.* ;
+import com.linxonline.mallet.resources.texture.* ;
 import com.linxonline.mallet.util.id.IDInterface ;
 import com.linxonline.mallet.system.GlobalConfig ;
 
@@ -154,8 +154,8 @@ public class Canvas2DRenderer extends Basic2DRender
 		final MalletColour colour = _settings.getObject( "COLOUR", null ) ;
 		if( colour != null )
 		{
-			fontPaint.setARGB( 255, colour.red, colour.green, colour.blue ) ;
-			paint.setARGB( 255, colour.red, colour.green, colour.blue ) ;
+			fontPaint.setARGB( 255, colour.getRed(), colour.getGreen(), colour.getBlue() ) ;
+			paint.setARGB( 255, colour.getRed(), colour.getGreen(), colour.getBlue() ) ;
 		}
 		else
 		{
