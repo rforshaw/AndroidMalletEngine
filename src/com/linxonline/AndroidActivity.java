@@ -43,7 +43,7 @@ public class AndroidActivity extends Activity
 		super() ;
 	}
 
-	private void init()
+	protected void init()
 	{
 		androidSystem = new AndroidSystem( this ) ;
 		androidSystem.initSystem() ;
