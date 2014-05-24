@@ -129,13 +129,31 @@ public class AndroidFileSystem implements FileSystem
 	}
 
 	@Override
-	public boolean doesResourceExist( final String _file )
+	public boolean exist( final String _file )
 	{
 		return false ;
 	}
 
 	@Override
-	public boolean deleteResource( final String _file )
+	public boolean delete( final String _file )
+	{
+		return false ;
+	}
+
+	/**
+		Create the directory structure represented by _path.
+	*/
+	public boolean makeDirectories( final String _path )
+	{
+		return false ;
+	}
+
+	public boolean isFile( final String _file )
+	{
+		return false ;
+	}
+
+	public boolean isDirectory( final String _path )
 	{
 		return false ;
 	}
